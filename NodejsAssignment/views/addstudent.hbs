@@ -1,0 +1,64 @@
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+<div class="card">
+    <br>
+    <div id="heading" class="container" style="background-color:chocolate ; color:white ; font-size:larger " >Add Student Result</div>
+    <br>
+
+    <div class="container" id="body" >
+        <form  action="/addedresult" >
+            <div class="form-row">
+                <div class="form-group col-md-6"  >
+                    <label for="Name">Name</label>
+                    <input required   type="text" class="form-control"  name="Name" placeholder="Enter Students Name">
+                    
+                    
+                
+                </div>
+                <br>
+                <div class="form-group col-md-6"  >
+                    <label for="RollNo">Roll Number</label>
+                    <input required  type="number" min="1" max="50" class="form-control"  name="RollNo" placeholder="Enter Students RollNumber">
+                    
+                </div>
+                <br>
+                <div class="form-group col-md-6">
+                    <label for="DateOfBirth">Date Of Birth</label>
+                    <input   required type="date"  class="form-control"  name="DateOfBirth" placeholder="Enter Students DateOfBirth">
+                    
+                </div>
+                <br>
+                <div class="form-group col-md-6"  >
+                    <label for="Score">Score</label>
+                    <input required type="number" min="0" max="100"  class="form-control"  name="Score" placeholder="Enter Students Score">
+                    
+                </div>
+                <br>
+
+
+                
+
+
+                <a <button href="/teacher" type="button" class="btn btn-primary" style="margin-left:50px"  >Back</button> </a>
+
+                <button  type="submit"  class=" btn btn-primary" style="margin-left:120px"  >Save Result</button>
+
+                
+                {{#if mssg}}
+                <h5 class="alert alert-primary" role="alert" >Data Inserted</h5>
+                {{/if}}
+                
+
+                
+
+                {{#if invalid}}
+                <h5 class="alert alert-danger" role="alert" >Result of this RollNumber already exists</h5>
+                {{/if}}
+
+
+            </div>
+        </form>
+
+    </div>
+</div>

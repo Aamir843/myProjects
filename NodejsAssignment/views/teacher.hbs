@@ -1,0 +1,61 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+<div class="card"  >
+  <br>
+  <div id="heading" class="container" style="background-color:chocolate ; color:white ; font-size:larger " >Student Results</div>
+
+  <div class="container">
+    <a <button href="/addstudent"  type="button" class="btn btn-primary" style="margin-right:80px ; float: right; " >Add Result</button> </a>
+    <a <button href="/" type="button" class="btn btn-primary" style="margin-right: 10px; float: right;" >Back</button> </a>
+  </div>
+
+
+
+
+  <div class="container"  >
+    <h4 style="margin-top: 20px; color:midnightblue ;">
+      Total Number of students :   {{len}}
+    </h4>
+    
+
+    <table class="table table-bordered" style="margin-top:20px ;" >
+      <thead>
+        <tr>
+          <th scope="col">Roll Number</th>
+          <th scope="col">Name</th>
+          <th scope="col">DateOfBirth</th>
+          <th scope="col">Score</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        
+        {{#dataa}}
+        <tr>
+          
+          
+          
+          <td>{{RollNumber}}</td>
+          <td>{{Name}}</td>
+          <td>{{DateOfBirth}}</td>
+          <td>{{Score}}</td>
+
+          <td>
+            <a href="/editstudent/{{RollNumber}}" <button class="btn btn-sm btn-success">Edit</button> </a>
+            <a href="/delete/{{RollNumber}}" <button class="btn btn-sm btn-secondary"  >Delete</button> </a>
+            
+          </td>
+
+          
+          
+          
+                
+        </tr>
+        {{/dataa}}
+        
+              
+      </tbody>
+    </table>
+  </div>
+</div>

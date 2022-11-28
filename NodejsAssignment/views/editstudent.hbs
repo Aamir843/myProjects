@@ -1,0 +1,64 @@
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+
+<div class="container"  >
+    <div id="heading" class="container" style="background-color:chocolate ; color:white ; font-size:larger " >Update Student Result</div>
+    <div class="card-body"  >
+        <form action="/updateResult" style="margin-top:50px" >
+            <div class="form-row">
+                
+                <h4>Roll Number : {{Roll}}</h4>
+                
+                <div class="form-group col-md-6"  >
+                    <input value="{{Roll}}" type="hidden" class="form-control"  name="RollNo" >                    
+                </div>
+                <br>
+
+
+                <div class="form-group col-md-6" >
+                    <label for="Name">Name</label>
+                    <input value="{{NName}}" required type="text"  class="form-control"  name="Name">
+                </div>
+                <br>
+                
+                
+                <div class="form-group col-md-6"  >
+                    <label for="DateOfBirth">Date Of Birth</label>
+                    <input value="{{BBirth}}" required type="date"  class="form-control"  name="DateOfBirth" >
+                </div>
+
+                <br>
+
+                <div class="form-group col-md-6" >
+                    <label for="Score">Score</label>
+                    <input value="{{SScore}}" required type="number" min="0" max="100" class="form-control"  name="Score" >                    
+                </div>
+
+                
+
+
+                <br>
+
+
+                <a <button href="/teacher"  type="button" class="btn btn-primary" >Back</button> </a>
+                <button  type="submit"   class="btn btn-primary" style="margin-left:30px" >Update Result</button>
+
+
+                
+                {{#if failed}}
+                <h5 class="alert alert-danger" role="alert" >An error occurred</h5>
+                {{/if}}
+
+                
+
+                
+                
+
+
+                
+            </div>
+        </form>
+
+    </div>
+</div>
